@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login & Signup Page</title>
+  <link rel="stylesheet" href="styles.css">
+  
+</head>
+<body>
+  <section>
+    <div class="video-background">
+      <video autoplay muted loop id="background-video">
+        <source src="/assets/windmills-battlefield-1-dawn-of-war-wallpaperwaifu-com.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <button id="switch-video" class="video-switch-button" title="Background Change"></button>
+    <div class="container">
+      <div class="form-container">
+        <!-- Sign Up Form -->
+        <div class="form signup-form">
+          <h2>Sign Up</h2>
+          <div class="inputGroup">
+            <input type="text" required>
+            <label>Name</label>
+          </div>
+          <div class="inputGroup">
+            <input type="email" required>
+            <label>Email</label>
+          </div>
+          <div class="inputGroup">
+            <input type="password" required>
+            <label>Password</label>
+          </div>
+          <div>
+          <input type="submit" value="Sign Up" class="btn-done">
+          <input type="button" value="Cancel" class="btn-done">
+          </div>
+
+          <div class="remeber">
+            Already have an account? 
+            <button id="switch-to-login">Log In</button>
+          </div>
+        </div>
+
+        <!-- Login Form -->
+        <div class="form login-form" id="login-form">
+          <h2>Log In</h2>
+          <div class="inputGroup">
+            <input type="email" required>
+            <label>Email</label>
+          </div>
+          <div class="inputGroup">
+            <input type="password" required>
+            <label>Password</label>
+          </div>
+          <div>
+          <input type="submit" value="Log In" class="btn-done">
+          <input type="button" value="Cancel" class="btn-done">
+          </div>
+          <div class="remeber">
+            Don’t have an account? 
+            <button id="switch-to-signup">Sign Up</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="script.js"></script>
+  
+</body>
+</html>
