@@ -1,0 +1,210 @@
+@keyframes fadeInVideo {
+  0% {
+    opacity: 0;
+    background: black;
+  }
+  100% {
+    opacity: 0.9;
+    background: none;
+  }
+}
+
+@keyframes zoomInBounce {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  70% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+    backdrop-filter: blur(3px);
+  }
+}
+
+body{
+  background-color: #000000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.video-background video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  animation: fadeInVideo 1s ease forwards;
+}
+
+.container {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  perspective: 1000px;
+  opacity: 0;
+  animation: zoomInBounce 0.8s ease-out forwards;
+  animation-delay: 1s; 
+}
+
+.form-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease-in-out;
+}
+
+.form {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.253);
+  backdrop-filter: blur(3px);
+  border: 2px solid #fff;
+  border-radius: 13px;
+  padding: 20px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.signup-form {
+  transform: rotateY(0deg);
+}
+
+
+.login-form {
+  transform: rotateY(180deg);
+}
+
+
+.inputGroup {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 5px 0 5px 0;
+  width: 300px;
+  position: relative;
+  padding-bottom: 25px;
+}
+
+.inputGroup input {
+  font-size: 100%;
+  color: white;
+  padding: 0.8em;
+  outline: none;
+  border: 2px solid rgb(255, 255, 255);
+  background-color: transparent;
+  border-radius: 20px;
+  width: 100%;
+}
+
+.inputGroup label {
+  font-size: 100%;
+  position: absolute;
+  left: 0;
+  padding: 18px;
+  margin-left: 0.5em;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  color: rgb(255, 255, 255);
+}
+
+.inputGroup :is(input:focus, input:valid)~label {
+  transform: translateY(-70%) scale(.9);
+  margin: 0em;
+  margin-left: 1em;
+  padding: 0.4em;
+  background-color: #e8e8e800;
+}
+
+.inputGroup :is(input:focus, input:valid) {
+  border-color: rgb(141, 137, 137);
+}
+
+h2{
+  color: #fff;
+  font-size: 24px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: bold;
+  padding-bottom: 15px;
+}
+
+.btn-done{
+  background-color: #6b11cb00;
+  color: #fff;
+  padding: 7px 20px;
+  border: 2px solid #fff;
+  border-radius: 7px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-done:hover{
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.remeber {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #fff;
+}
+
+button {
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  text-decoration: underline;
+}
+
+button:hover {
+  color: #6a11cb;
+}
+
+
+.video-switch-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 20px;
+  height: 20px;
+  background-color: rgba(104, 24, 24, 0);
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  font-size: 10px;
+  cursor: pointer;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.video-switch-button:hover {
+  background-color: rgba(255, 255, 255, 1);
+    
+}
