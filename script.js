@@ -6,12 +6,12 @@ const videoElement = document.getElementById('background-video');
 
 // Video sources array
 const videoSources = [
-  '/assets/windmills-battlefield-1-dawn-of-war-wallpaperwaifu-com.mp4',
-  '/assets/Live Wallpaper 4K Wonderful Landscape [m4P9XkF9gsI].webm',
-  '/assets/mylivewallpapers-com-Purple-Autumn-Lake-4K.mp4',
-  '/assets/green-leaves-wallpaperwaifu-com.mp4',
-  '/assets/snowfall-in-forest.3840x2160.mp4',
-  '/assets/black-abstract-tiles.3840x2160.mp4'
+  'assets/windmills-battlefield-1-dawn-of-war-wallpaperwaifu-com.mp4',
+  'assets/Live Wallpaper 4K Wonderful Landscape [m4P9XkF9gsI].webm',
+  'assets/mylivewallpapers-com-Purple-Autumn-Lake-4K.mp4',
+  'assets/green-leaves-wallpaperwaifu-com.mp4',
+  'assets/snowfall-in-forest.3840x2160.mp4',
+  'assets/black-abstract-tiles.3840x2160.mp4'
 ];
 let currentVideoIndex = 0;
 
